@@ -1,0 +1,57 @@
+span{
+	color: red;
+}
+
+#message{
+	border-radius: 7px;
+}
+#name{
+
+	height: 40px;
+	width: 280px;
+	border-radius: 7px;
+}
+.button{
+	border-radius: 7px;
+	margin: 5px 1px;
+	border: none;
+    color: white;
+    padding: 15px 20px;
+    background-color: #4c4cff;
+}
+
+#contact{
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 15px;
+}
+
+#header{
+	
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	background-color: black;
+}
+
+ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    text-align: center;
+    display: inline-block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: gray;
+}

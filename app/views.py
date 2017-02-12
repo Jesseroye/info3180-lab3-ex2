@@ -25,9 +25,38 @@ def about():
     return render_template('about.html', name="Mary Jane")
 
 
+@app.route('/contact/',methods=['GET','POST'])
+def contact():
+    form = ContactForm()
+    if request.method=='POST':
+         if form.validate() == False:
+            flash('All fields are required.')
+            return render_template('contact.html',form=form)
+
+         else:
+            fromname = form.name.data
+            fromaddr = form.mail.data
+            subject = form.sub.data
+            msg = form.message.data
+            sendemail(fromaddr,fromname,subject,msg)
+
+            return 'successful posting.'
+    else:
+        if request.method=='GET':
+         return render_template('contact.html', form=form)
+
+
+
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+
+
+
+
+
+
+
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
